@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips & Habit Tracker — Generasi Rebahan</title>
+<meta name="description" content="Kumpulan tips digital detox, fakta acak, serta checklist habit tracker harian dengan reset otomatis jam 22:00 WIB.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-mode="rebahan">
+
+<nav class="topbar">
+  <div class="nav-inner">
+    <div class="brand"><a href="index.html" style="text-decoration:none;">Generasi<span>Rebahan</span></a></div>
+    <div class="navlinks" id="navlinks">
+      <a href="index.html#beranda">Beranda</a>
+      <a href="index.html#cermin">Cermin</a>
+      <a href="index.html#fakta">Fakta</a>
+      <a href="index.html#dampak">Dampak</a>
+      <a href="kuis.html">Kuis</a>
+      <a href="tips.html" class="active">Tips & Tracker</a>
+    </div>
+    <div class="nav-tools">
+      <button class="tool-btn" id="fontToggle" title="Ubah ukuran teks">A+</button>
+      <button class="tool-btn" id="modeToggle">🌙 Mode Rebahan</button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Beranda</a> / <span>Tips & Habit Tracker</span></div>
+    <h1>Tips Aksi Nyata & Tracker Harian</h1>
+    <p class="lede">Langkah kecil tetap dihitung. Pelajari tips digital detox, dapatkan fakta acak, dan pantau kebiasaan sehatmu dengan sistem reset otomatis Jam 22:00 WIB.</p>
+  </div>
+</section>
+
+<section id="tips" style="padding-top:10px;">
+  <div class="wrap">
+    <!-- Quiz Result Recommendation Banner (Dynamic JS) -->
+    <div class="quiz-reco-banner" id="quizRecoBanner" style="display: none;">
+      <div class="reco-banner-inner">
+        <div class="reco-banner-icon">🎯</div>
+        <div class="reco-banner-info">
+          <div class="reco-banner-title">
+            Hasil Kuis Kamu: <span id="recoLevelText">BALANCED</span> (<span id="recoScoreNum">0</span>/120)
+          </div>
+          <div class="reco-banner-desc">
+            Perhatian Utama: <strong id="recoFocusTitle">POLA TIDUR</strong> — <span id="recoFocusDesc">Aktivitas digitalmu terlihat cukup sering menggeser waktu istirahat.</span>
+          </div>
+        </div>
+        <a href="kuis.html" class="btn btn-ghost reco-banner-btn">Ulangi Kuis 🔄</a>
+      </div>
+    </div>
+
+    <div class="eyebrow-num"><em>1</em> Tips Digital Detox</div>
+    <h2>Langkah kecil, tetap dihitung</h2>
+
+    <div class="accordion-list">
+      <div class="accordion-item open">
+        <div class="accordion-head">🌿 Digital detox singkat <span class="plus">−</span></div>
+        <div class="accordion-body">Coba mulai dari 1 jam tanpa HP sebelum tidur, atau taruh HP di luar jangkauan tangan saat makan.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-head">🥗 Ganti snack, bukan langsung diet ketat <span class="plus">+</span></div>
+        <div class="accordion-body">Sediakan buah potong atau kacang-kacangan sebagai camilan pengganti gorengan/junk food kemasan.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-head">⏰ Jadwal tidur konsisten <span class="plus">+</span></div>
+        <div class="accordion-body">Tidur & bangun di jam yang sama tiap hari, termasuk akhir pekan, membantu ritme tubuh lebih stabil.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-head">🚶 Gerak 5 menit tiap jam <span class="plus">+</span></div>
+        <div class="accordion-body">Set pengingat untuk berdiri/jalan singkat tiap satu jam kerja atau belajar di depan layar.</div>
+      </div>
+    </div>
+
+    <div class="fact-box">
+      <div id="randomFact">Klik tombol untuk lihat fakta acak seputar gaya hidup digital.</div>
+      <button class="btn btn-primary" id="factBtn">Fakta Acak 🎲</button>
+    </div>
+
+    <!-- Habit Tracker Section -->
+    <div class="habit-tracker-container" id="habitTracker">
+      <div class="habit-tracker-header">
+        <div class="header-text">
+          <h3 class="tracker-title">Checklist & Habit Tracker Harian</h3>
+          <p class="tracker-desc">Pantau kebiasaan sehatmu. Progres di-reset otomatis setiap hari pada Jam 22:00 (10 PM) WIB.</p>
+        </div>
+        <div class="timer-card">
+          <div class="timer-header">
+            <span class="timer-icon">⏳</span>
+            <span class="timer-label">RESET HARIAN (10 PM / 22:00)</span>
+          </div>
+          <div class="timer-countdown" id="resetCountdown">00:00:00</div>
+        </div>
+      </div>
+
+      <div class="habit-stats-row">
+        <div class="habit-stat-card" id="streakCard">
+          <div class="stat-card-icon">🔥</div>
+          <div class="stat-card-info">
+            <div class="stat-value"><span id="streakCount">0</span> Hari</div>
+            <div class="stat-label">Streak Harian</div>
+          </div>
+          <div class="stat-badge" id="streakBadge">Min. 4 Centang</div>
+        </div>
+
+        <div class="habit-stat-card">
+          <div class="stat-card-icon">🎯</div>
+          <div class="stat-card-info">
+            <div class="stat-value" id="completedSummary">0 dari 0</div>
+            <div class="stat-label">Target Selesai Hari Ini</div>
+          </div>
+          <div class="stat-badge" id="targetStatusBadge">Minimal 4 untuk Streak</div>
+        </div>
+      </div>
+
+      <div class="habit-filter-row" id="categoryTabs">
+        <button class="filter-tab active" data-cat="Semua">Semua</button>
+        <button class="filter-tab" data-cat="Fisik">🏃 Fisik</button>
+        <button class="filter-tab" data-cat="Mental">🧠 Mental</button>
+        <button class="filter-tab" data-cat="Nutrisi">🥗 Nutrisi</button>
+        <button class="filter-tab" data-cat="Tidur">🌙 Tidur</button>
+        <button class="filter-tab" data-cat="Custom">⚡ Custom</button>
+      </div>
+
+      <div class="add-habit-box">
+        <input type="text" id="newHabitInput" class="habit-input-text" placeholder="Tambah kebiasaan harian baru..." maxlength="60">
+        <select id="newHabitCategory" class="habit-select-cat">
+          <option value="Custom">⚡ Custom</option>
+          <option value="Fisik">🏃 Fisik</option>
+          <option value="Mental">🧠 Mental</option>
+          <option value="Nutrisi">🥗 Nutrisi</option>
+          <option value="Tidur">🌙 Tidur</option>
+        </select>
+        <button id="addHabitBtn" class="btn-add-habit">+ Tambah Target</button>
+      </div>
+
+      <div class="habit-list" id="habitList">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <div class="habit-progress-section">
+        <div class="progress-text-row">
+          <span id="habitProgressText">0 dari 0 selesai hari ini</span>
+          <span id="habitPercentText">0%</span>
+        </div>
+        <div class="habit-progress-bar">
+          <div class="habit-progress-fill" id="habitProgressFill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="tentang">
+  Dibuat sebagai purwarupa belajar fitur untuk Lomba Web Design INVENTION 2026 · Subtema "Designing a Healthier Society Through the Web"
+</footer>
+
+<!-- Custom Confirmation Modal -->
+<div class="confirm-modal-overlay" id="confirmModalOverlay">
+  <div class="confirm-modal-box">
+    <div class="confirm-modal-icon">🎯</div>
+    <h3 class="confirm-modal-title">Konfirmasi Kebiasaan</h3>
+    <p class="confirm-modal-text" id="confirmModalText">Apakah benar Anda sudah melakukan kebiasaan ini?</p>
+    <p class="confirm-modal-subtext">⚠️ Setelah dicentang, centang tidak dapat dibatalkan atau dihapus lagi hari ini (sampai reset Jam 22:00).</p>
+    <div class="confirm-modal-actions">
+      <button class="btn btn-ghost" id="confirmCancelBtn">Batal</button>
+      <button class="btn btn-primary" id="confirmOkBtn">Ya, Saya Sudah Melakukannya</button>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

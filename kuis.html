@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuis Kebiasaan — Generasi Rebahan</title>
+<meta name="description" content="Cek cepat 2 menit: 10 soal inti plus maksimal 2 pertanyaan adaptif untuk melihat profil kebiasaan digitalmu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-mode="rebahan">
+
+<nav class="topbar">
+  <div class="nav-inner">
+    <div class="brand"><a href="index.html" style="text-decoration:none;">Generasi<span>Rebahan</span></a></div>
+    <div class="navlinks" id="navlinks">
+      <a href="index.html#beranda">Beranda</a>
+      <a href="index.html#cermin">Cermin</a>
+      <a href="index.html#fakta">Fakta</a>
+      <a href="index.html#dampak">Dampak</a>
+      <a href="kuis.html" class="active">Kuis</a>
+      <a href="tips.html">Tips & Tracker</a>
+    </div>
+    <div class="nav-tools">
+      <button class="tool-btn" id="fontToggle" title="Ubah ukuran teks">A+</button>
+      <button class="tool-btn" id="modeToggle">🌙 Mode Rebahan</button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Beranda</a> / <span>Kuis Kebiasaan</span></div>
+    <h1>Cek Level Kebiasaan Digitalmu</h1>
+    <p class="lede">Cek cepat sekitar 2 menit: 10 pertanyaan inti, plus maksimal 2 lanjutan yang menyesuaikan jawabanmu — bukan tes kesehatan.</p>
+  </div>
+</section>
+
+<section id="kuis" style="padding-top:10px;">
+  <div class="wrap">
+    <div class="quiz-container-box">
+      <!-- Active Quiz Interface -->
+      <div id="quizActiveView">
+        <div class="quiz-header-banner">
+          <span class="quiz-sub-eyebrow">CEK KEBIASAANMU</span>
+          <h3 class="quiz-main-heading">Seberapa rebahan kamu hari ini?</h3>
+        </div>
+
+        <div class="quiz-progress-wrapper">
+          <div class="quiz-dots" id="quizDots"></div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="quiz-card-content" id="quizCardContent">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+
+        <!-- Bottom counter -->
+        <div class="quiz-footer">
+          <span class="quiz-step-counter" id="quizStepCounter">1 / 10</span>
+        </div>
+      </div>
+
+      <!-- Result Screen (Initially hidden) -->
+      <div class="quiz-result-view" id="quizResultView" style="display: none;">
+        <div class="result-header">
+          <span class="result-badge-top">HASIL CEK KEBIASAANMU</span>
+          <div class="result-score-main">
+            <span class="score-number" id="resultScoreNum">68</span>
+            <span class="score-denom">/ 120</span>
+          </div>
+          <div class="result-status-badge" id="resultStatusBadge">
+            <span class="status-icon" id="resultStatusIcon">🟢</span>
+            <span class="status-text" id="resultStatusText">BALANCED</span>
+          </div>
+          <p class="result-status-desc" id="resultStatusDesc">
+            "Bukan berarti kamu tidak sehat. Tapi beberapa kebiasaanmu mulai perlu diperhatikan."
+          </p>
+        </div>
+
+        <div class="result-divider"></div>
+
+        <!-- 5 Dimensions Breakdown -->
+        <div class="result-dimensions">
+          <h4 class="dimensions-title">PROFIL KEBIASAAN DIGITAL & HARIAN</h4>
+          <div class="dimension-list" id="dimensionList">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+
+        <!-- Primary Focus Alert -->
+        <div class="result-focus-card" id="resultFocusCard">
+          <div class="focus-header">
+            <span class="focus-alert-icon">🚨</span>
+            <div>
+              <span class="focus-label">PERHATIAN UTAMA</span>
+              <h4 class="focus-title" id="focusTitle">POLA TIDUR</h4>
+            </div>
+          </div>
+          <p class="focus-desc" id="focusDesc">
+            Aktivitas digitalmu terlihat cukup sering menggeser waktu istirahat.
+          </p>
+        </div>
+
+        <!-- 3 Action Recommendations -->
+        <div class="result-actions-section">
+          <h4 class="actions-title">💡 3 hal yang bisa kamu ubah mulai hari ini</h4>
+          <div class="action-cards-grid" id="actionCardsGrid">
+            <!-- Rendered dynamically by script.js -->
+          </div>
+        </div>
+
+        <div class="result-btn-row">
+          <a href="tips.html" class="btn btn-primary" id="btnGoToTips">LIHAT SARANMU →</a>
+          <button class="btn btn-ghost" id="quizRestartBtn">🔄 Ulangi Kuis</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="tentang">
+  Dibuat sebagai purwarupa belajar fitur untuk Lomba Web Design INVENTION 2026 · Subtema "Designing a Healthier Society Through the Web"
+</footer>
+
+<!-- jQuery via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

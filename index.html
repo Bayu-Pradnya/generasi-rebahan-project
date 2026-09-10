@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generasi Rebahan — Potret Gaya Hidup Digital</title>
+<meta name="description" content="Kampanye kesadaran gaya hidup digital sehat: screen time, sedentary lifestyle, junk food, dan kurang tidur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-mode="rebahan">
+
+<nav class="topbar">
+  <div class="nav-inner">
+    <div class="brand"><a href="index.html" style="text-decoration:none;">Generasi<span>Rebahan</span></a></div>
+    <div class="navlinks" id="navlinks">
+      <a href="index.html#beranda" class="active">Beranda</a>
+      <a href="index.html#cermin">Cermin</a>
+      <a href="index.html#fakta">Fakta</a>
+      <a href="index.html#dampak">Dampak</a>
+      <a href="kuis.html">Kuis</a>
+      <a href="tips.html">Tips & Tracker</a>
+    </div>
+    <div class="nav-tools">
+      <button class="tool-btn" id="fontToggle" title="Ubah ukuran teks">A+</button>
+      <button class="tool-btn" id="modeToggle">🌙 Mode Rebahan</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="beranda">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Kamu tim rebahan, atau cuma lagi istirahat?</h1>
+        <p class="lede">Situs demo ini merangkum gaya hidup "serba cepat & serba layar" generasi muda — screen time berlebihan, rebahan seharian, junk food, dan kurang tidur — sekaligus jadi contoh kerja semua fitur yang direncanakan untuk lomba Web Design INVENTION 2026.</p>
+        <div class="hero-stat-row">
+          <div class="hero-stat"><b>5,7–7,4</b><span>jam screen time / hari (rata-rata Indonesia)</span></div>
+          <div class="hero-stat"><b>66,3%</b><span>orang dengan gaya hidup sedentari</span></div>
+          <div class="hero-stat"><b>88,1%</b><span>screen time tinggi pada studi terkait</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="kuis.html">Cek Level Rebahanmu →</a>
+          <a class="btn btn-ghost" href="#fakta">Lihat Data Lengkap</a>
+        </div>
+      </div>
+
+      <div class="hero-mascot">
+        <div class="mascot-stage">
+          <span class="mascot-glow" aria-hidden="true"></span>
+          <img
+            id="heroMascotImg"
+            src="mascot/aset6.png"
+            alt="Maskot kukang Generasi Rebahan sedang rebahan dengan tablet dan keripik"
+            width="420"
+            height="420"
+          >
+        </div>
+        <div class="mascot-meter">
+          <input type="range" id="rebahanSlider" min="0" max="100" value="82" aria-label="Level rebahan maskot">
+          <div class="mascot-meter-labels">
+            <span>Rebahan Ringan</span>
+            <span>Rebahan Maksimal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cermin">
+  <div class="wrap">
+    <div class="eyebrow-num"><em>2</em> Cermin Kebiasaan</div>
+    <h2>Coba tebak, mana yang kebiasaanmu?</h2>
+    <p style="color:var(--text-dim)">Klik tiap kartu untuk lihat refleksinya.</p>
+    <div class="mirror-grid" id="mirrorGrid">
+      <div class="mirror-card">
+        <h3>🌅 Bangun tidur</h3>
+        <span class="hint">klik untuk refleksi</span>
+        <div class="reveal">Alarm bunyi, tangan otomatis cari HP dulu sebelum kaki menyentuh lantai. 30 menit pertama hari ini habis untuk scroll, bukan untuk diri sendiri.</div>
+      </div>
+      <div class="mirror-card">
+        <h3>🍔 Jam makan siang</h3>
+        <span class="hint">klik untuk refleksi</span>
+        <div class="reveal">Makan sambil nonton video pendek — porsi jadi tidak terasa, dan yang dipesan biasanya yang paling cepat sampai, bukan yang paling sehat.</div>
+      </div>
+      <div class="mirror-card">
+        <h3>🛋️ Sore hari</h3>
+        <span class="hint">klik untuk refleksi</span>
+        <div class="reveal">"Rebahan sebentar" setelah pulang, ternyata tahu-tahu sudah dua jam berlalu di media sosial.</div>
+      </div>
+      <div class="mirror-card">
+        <h3>🌙 Menjelang tidur</h3>
+        <span class="hint">klik untuk refleksi</span>
+        <div class="reveal">Niatnya tidur jam 10, tapi "satu video lagi" berulang sampai lewat tengah malam — besok bangun tetap harus jam yang sama.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fakta">
+  <div class="wrap">
+    <div class="eyebrow-num"><em>3</em> Fakta & Data</div>
+    <h2>Angka yang mungkin bikin kaget</h2>
+    <p style="color:var(--text-dim)">Statistik ini animasi menghitung naik saat kamu scroll sampai sini.</p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-num" data-target="7.4" data-suffix=" jam">0</div><div class="stat-label">Rata-rata screen time harian tertinggi di Indonesia</div></div>
+      <div class="stat-card"><div class="stat-num" data-target="66" data-suffix="%">0</div><div class="stat-label">Populasi dengan gaya hidup sedentari (studi RS Insan Permata, 2025)</div></div>
+      <div class="stat-card"><div class="stat-num" data-target="45" data-suffix="%">0</div><div class="stat-label">Remaja Indonesia pernah mengalami cyberbullying (UNICEF)</div></div>
+      <div class="stat-card"><div class="stat-num" data-target="61" data-suffix="%">0</div><div class="stat-label">Penduduk konsumsi minuman berpemanis &gt;1x/hari (Kemenkes)</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="dampak">
+  <div class="wrap">
+    <div class="eyebrow-num"><em>4</em> Dampaknya Buat Kamu</div>
+    <h2>Fisik dan mental, dua-duanya kena</h2>
+    <div class="impact-list">
+      <div class="impact-item"><span class="tag">Fisik</span><h3>Postur & mata</h3><p style="font-size:.9rem;color:var(--text-dim)">"Tech neck", nyeri punggung, dan digital eye strain dari posisi menunduk berjam-jam.</p></div>
+      <div class="impact-item"><span class="tag">Fisik</span><h3>Berat badan</h3><p style="font-size:.9rem;color:var(--text-dim)">Kombinasi kurang gerak dan junk food meningkatkan risiko obesitas & diabetes tipe 2.</p></div>
+      <div class="impact-item"><span class="tag">Mental</span><h3>Kecemasan & FOMO</h3><p style="font-size:.9rem;color:var(--text-dim)">Paparan media sosial berlebih dikaitkan dengan kecemasan dan perbandingan sosial.</p></div>
+      <div class="impact-item"><span class="tag">Mental</span><h3>Kualitas tidur</h3><p style="font-size:.9rem;color:var(--text-dim)">Cahaya layar sebelum tidur mengganggu ritme sirkadian, bikin susah tidur nyenyak.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Callout Section to Dedicated Pages -->
+<section id="explorePages" class="callout-section">
+  <div class="wrap">
+    <div class="callout-grid">
+      <div class="callout-card">
+        <div class="callout-icon">🎯</div>
+        <h3>Ingin Tahu Level Kebiasaanmu?</h3>
+        <p>Ikuti Cek Kebiasaan 2 Menit (12 Soal Adaptif) untuk mengetahui skor profil digitalmu dari 5 dimensi.</p>
+        <a href="kuis.html" class="btn btn-primary">Mulai Kuis Adaptif →</a>
+      </div>
+      <div class="callout-card">
+        <div class="callout-icon">🌱</div>
+        <h3>Tips & Habit Tracker Harian</h3>
+        <p>Akses rekomendasi aksi nyata, fakta acak, serta tracker target harian dengan fitur reset otomatis Jam 22:00.</p>
+        <a href="tips.html" class="btn btn-ghost">Buka Tips & Tracker →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="tentang">
+  Dibuat sebagai purwarupa belajar fitur untuk Lomba Web Design INVENTION 2026 · Subtema "Designing a Healthier Society Through the Web"
+</footer>
+
+<!-- jQuery via CDN (sesuai ketentuan: JS library hanya boleh jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
